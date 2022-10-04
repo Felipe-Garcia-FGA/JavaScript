@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pessoas</title>
+    <style>
+        body {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de pessoas:</h1>
+    Qual é o seu país de origem? <input type="text" name="txtpa" id="txtpa">
+    <input type="button" value="Verificar" onclick="verificar()"> 
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar() {
+            var txtp = window.document.querySelector('input#txtpa')
+            var res = document.querySelector('div#res')
+            var país = String(txtp.value)
+            res.innerHTML = `<p>Vivendo em <strong>${país}</strong></p>`
+            if (país == 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+            }
+            
+
+        }
+
+    </script>
+    
+</body>
+</html>

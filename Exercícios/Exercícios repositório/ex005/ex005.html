@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            padding: 15px;
+            background-color: rgb(28, 136, 136);
+            border-radius: 5px;
+            border: none;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.30);
+            
+        }
+
+        div {
+            padding-top: 16px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com númeors</h1>
+    <input type="button" value="Clique para calcular" onclick="inicio()">
+
+    <div id="res" >
+        <p>O resultado vem aqui...</p>
+    </div>
+    
+    <script>
+        window.alert('Seja bem-vindo(a) ao meu site!')
+        function inicio() {
+            /*
+            var entra = window.prompt ('Digite um número:')
+            var num = Number(entra.value)
+            var dobro = entra * 2
+            var metade = entra / 2
+            var res = document.querySelector('div#res')
+            res.innerHTML = `O dobro de ${entra} é ${dobro} e a metade é ${metade}!`*/
+            var n1 = window.prompt ('Digite um número:')
+            var res = document.querySelector('div#res')
+            res.innerHTML = `O dobro de ${n1} é ${n1*2} e a metade é ${n1/2}!`
+        }
+    </script>
+</body>
+</html>
